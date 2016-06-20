@@ -68,6 +68,17 @@
     </form>
     <p><button class="btn btn-default" type="button" id="ueberpruefen3" onclick="ueberpruefeMatching()">Lösung prüfen</button></p>
   </div>
-  <p style="float:left" id="result"></p>
-  <a id="btnNextAufgDone" style="float:right;margin-top: 5px;margin-bottom: 5px" class="btn btn-lg btn-success" onclick="naechsteAufgabe()"()>Zur nächsten Aufgabe</a>
+  <table width="99%">
+    <tr>
+      <td width="33%">
+        <a id="btnPreviousAufgDone" style="float:left;margin-top: 5px;margin-bottom: 5px" class="btn btn-lg btn-success ng-hide" onclick="vorherigeAufgabe()"()>Zur vorherigen Aufgabe</a>
+      </td>
+      <td align="center" width="33%">
+        <p align="center" style="display: inline-block;" id="result"></p>
+      </td>
+      <td width="33%">
+        <a id="btnNextAufgDone" style="float:right;margin-top: 5px;margin-bottom: 5px" class="btn btn-lg btn-success" onclick="naechsteAufgabe()"()>Zur nächsten Aufgabe</a>
+      </td>
+    </tr>
+  </table>
 </div>

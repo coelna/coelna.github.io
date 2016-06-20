@@ -66,9 +66,26 @@ function naechsteAufgabe () {
     angular.element(document.getElementsByClassName("lect").item(aktSicht)).addClass("ng-hide");
     aktSicht++;
     angular.element(document.getElementsByClassName("lect").item(aktSicht)).removeClass("ng-hide");
-
+    angular.element(document.getElementById("btnPreviousAufgDone")).removeClass("ng-hide");
     if (aktSicht == maxSicht) {
       angular.element(document.getElementById("btnNextAufgDone")).addClass("ng-hide");
+    }
+  }
+  else
+  {
+
+  }
+}
+function vorherigeAufgabe () {
+  var minSicht = 0;
+  if(aktSicht >= minSicht) {
+    document.getElementById("result").innerHTML = "";
+    angular.element(document.getElementsByClassName("lect").item(aktSicht)).addClass("ng-hide");
+    aktSicht--;
+    angular.element(document.getElementsByClassName("lect").item(aktSicht)).removeClass("ng-hide");
+    angular.element(document.getElementById("btnNextAufgDone")).removeClass("ng-hide");
+    if (aktSicht == minSicht) {
+      angular.element(document.getElementById("btnPreviousAufgDone")).addClass("ng-hide");
     }
   }
   else
